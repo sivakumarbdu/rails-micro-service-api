@@ -1,5 +1,5 @@
 FROM ruby:2.5.3
-MAINTAINER sivakumar@livingmatrix.com
+MAINTAINER sivakumar@spritle.com
 RUN apt-get update  && apt-get install -y build-essential
 #for postgres
 RUN apt-get install -y libpq-dev
