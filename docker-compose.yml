@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  api:
+    build: .
+    command: "bin/rails server -b 0.0.0.0 -p 3000"
+    container_name: microservice-api
+    volumes:
+      - .:/app
+      - api_bundle:/usr/local/bundle
+    ports:
+      - "3000:3000" 
+    networks:
+      - micro-service
+networks:
+  micro-service:
+    external: true     
+volumes:
+  api_bundle:
